@@ -11,7 +11,7 @@ def extract_username_and_number(file):
             # split the line by @ to get the username
             username = fields.split('@')[0]
             email = fields.split(' ')[0]
-            # since there are two spaces between the email and the phone number, I will split by space and get the last two items
+            # since there are spaces in the phone number, I will split the line by space and get the last two items
             try:
                 # if there is no phone number in the line, I will use the company number
                 area_code, suffix = fields.split(' ')[-2:]
@@ -41,7 +41,7 @@ def main():
     if len(sys.argv) != 3:
         print("Usage: python active_user_solution_eloho.py <file1> <file2>")
         sys.exit(1)
-        
+
 # I will take in the two files as arguments
     file1 = sys.argv[1]
     file2 = sys.argv[2]
