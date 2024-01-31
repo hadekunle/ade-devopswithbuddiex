@@ -7,7 +7,6 @@ company_main_line = "(444) 123-1233"
 dict_info_a = {}    
 with open ('fileA','r') as file:
     for line in file: 
-        #lpalmer@hotmail.com (258) 549-4757
         line = line.strip()
         username = line.split('@')[0]
         email = line.split(' ')[0]
