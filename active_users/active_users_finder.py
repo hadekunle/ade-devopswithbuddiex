@@ -18,12 +18,13 @@ def format_output(fileA_data, fileB_data):
     output = []
     for username, status in fileB_data.items():
         if status.lower() == "yes":
-            email = username.split('@')[1]
-            if email.startswith('yaboo'):
-                if username in fileA_data:
-                    output.append(f"{username} ({fileA_data[username]})")
-                else:
-                    output.append(f"{username} (444) 123-1233")
+            if '@' in username:
+                email = username.split('@')[1]
+                if email.startswith('yaboo'):
+                    if username in fileA_data:
+                        output.append(f"{username} ({fileA_data[username]})")
+                    else:
+                        output.append(f"{username} (444) 123-1233")
     return output
 
 
