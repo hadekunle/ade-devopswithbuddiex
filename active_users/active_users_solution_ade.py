@@ -23,15 +23,16 @@ def active_users(all_users, check_active_users):
 
     with open (check_active_users,'r') as file:
         next(file)
-        line = line.strip()
-        username = line.split(' ')[0]
-        is_active = line.split(' ')[-1].title()
+        for line in file:
+            line = line.strip()
+            username = line.split(' ')[0]
+            is_active = line.split(' ')[-1].title()
 
-        if is_active == 'Yes':
-            if username in dict_info_a.keys():
-                print(f'{username} {dict_info_a[username]["phone_number"]}')
-            else:
-                print(f'{username} {company_main_line}')
+            if is_active == 'Yes':
+                if username in dict_info_a.keys():
+                    print(f'{username} {dict_info_a[username]["phone_number"]}')
+                else:
+                    print(f'{username} {company_main_line}')
 
 def main():
     if len(argument) != 3:
@@ -44,7 +45,7 @@ def main():
     if not path.exists(all_users):
         raise FileNotFoundError(f"{all_users} does not exist")
     if not path.exists(check_active_users):
-        raise FileNotFoundError(f"{all_users} does not exist")
+        raise FileNotFoundError(f"{check_active_users} does not exist")
 
     active_users(all_users,check_active_users)
 
