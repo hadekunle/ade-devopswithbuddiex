@@ -2,8 +2,6 @@ from os import path, system
 from pprint import pprint
 from sys import argv as argument
 
-system("clear")
-
 company_main_line = "(444) 123-1233"
 
 def active_users(all_users, check_active_users):
@@ -19,7 +17,6 @@ def active_users(all_users, check_active_users):
                                         'email' :email,
                                         'phone_number' : phone_number
                                     }
-    # pprint(dict_info_a)
 
     with open (check_active_users,'r') as file:
         next(file)
