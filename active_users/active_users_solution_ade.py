@@ -1,6 +1,6 @@
-from sys import argv as argument
-from os import system, path
+from os import path, system
 from pprint import pprint
+from sys import argv as argument
 
 system("clear")
 
@@ -23,16 +23,15 @@ def active_users(all_users, check_active_users):
 
     with open (check_active_users,'r') as file:
         next(file)
-        for line in file:
-            line = line.strip()
-            username = line.split(' ')[0]
-            is_active = line.split(' ')[-1].title()
+        line = line.strip()
+        username = line.split(' ')[0]
+        is_active = line.split(' ')[-1].title()
 
-            if is_active == 'Yes':
-                if username in dict_info_a.keys():
-                    print(f'{username} {dict_info_a[username]["phone_number"]}')
-                else:
-                    print(f'{username} {company_main_line}')
+        if is_active == 'Yes':
+            if username in dict_info_a.keys():
+                print(f'{username} {dict_info_a[username]["phone_number"]}')
+            else:
+                print(f'{username} {company_main_line}')
 
 def main():
     if len(argument) != 3:
