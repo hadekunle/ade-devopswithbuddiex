@@ -1,4 +1,6 @@
+import os
 default_number = "444-123-1233"
+
 
 
 def readfiles(file):
@@ -30,14 +32,51 @@ def isactive(activeA, activeB):
     return result
 
 
+# def checkforfiles():
+#     thisdir = os.getcwd()
+
+#     #check for files in the directory
+#     for f in os.walk(thisdir):
+#         for file in f
+
+
+def checkIffilesexist():
+    try:
+        arr = os.listdir("active_users")
+        
+        for n in arr:
+            if "file" in n:
+                print(n)
+                currentdir = os.path.join("active_users", n)
+                with open(currentdir, 'r') as file:
+                    f = file.read()
+                    print(f)
+                search_word = "@"
+                search_word2 = "Username"
+                if search_word in f:
+                    fir = currentdir
+                    
+                if search_word2 in f:
+                    t =currentdir 
+        filea = readfiles(fir)
+        fileb = readfiles(t)
+        res = isactive(filea,fileb) 
+        with open("active_users/Obi_answer", 'w') as final:
+            for key, value in res.items():
+                print(f"{key} {value}") 
+                final.write('{0}, {1}\n'.format(key,value))                 
+    except FileNotFoundError:
+        print("Doesn't exist")
+
+         
+
+
 def main():
     print("welcome")
-    fileA = readfiles("active_users_obi/fileA")
-    fileB = readfiles("active_users_obi/fileB")
-    res = isactive(fileA, fileB)
+    checkIffilesexist()
+   
 
-    for key, value in res.items():
-        print(f"{key} {value}")
+    
 
 
 if __name__ == "__main__":
