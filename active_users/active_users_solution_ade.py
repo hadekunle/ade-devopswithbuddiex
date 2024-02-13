@@ -1,8 +1,6 @@
-from sys import argv as argument
-from os import system, path
+from os import path, system
 from pprint import pprint
-
-system("clear")
+from sys import argv as argument
 
 company_main_line = "(444) 123-1233"
 
@@ -19,7 +17,6 @@ def active_users(all_users, check_active_users):
                                         'email' :email,
                                         'phone_number' : phone_number
                                     }
-    # pprint(dict_info_a)
 
     with open (check_active_users,'r') as file:
         next(file)
@@ -45,7 +42,7 @@ def main():
     if not path.exists(all_users):
         raise FileNotFoundError(f"{all_users} does not exist")
     if not path.exists(check_active_users):
-        raise FileNotFoundError(f"{all_users} does not exist")
+        raise FileNotFoundError(f"{check_active_users} does not exist")
 
     active_users(all_users,check_active_users)
 
