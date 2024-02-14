@@ -9,7 +9,7 @@ def readfiles(file):
         print("Error: No file")
     else:
         with open(file, "r") as file:
-            rows = (line.split(" ", 1) for line in file)
+            rows = (line.split(" ", 1) for line in file) #lpalmer@hotmail.com, (258) 549-4757
             dict = {row[0]: row[1].strip() for row in rows}
             for key, value in dict.items():
                 print(f"{key}: {value}")
