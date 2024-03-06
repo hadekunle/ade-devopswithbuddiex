@@ -20,6 +20,8 @@ def process_merge(directory_1,directory_2):
     # directory_2 = './dir2'
     new_directory = './new_dir_ade'
 
+
+
     list_dir_2 = list_files(directory_2,new_directory)
     list_dir_1 = list_files(directory_1,new_directory)
 
