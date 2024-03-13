@@ -8,7 +8,7 @@ Input: a file with following content
 148.252.55.159
 190.020.99.96
 149.130.0.90
-161.133.193.25a
+61.133.193.25a
  
 Output: valid IPs
  

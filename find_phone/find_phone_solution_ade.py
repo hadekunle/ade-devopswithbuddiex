@@ -26,9 +26,5 @@ def main():
             except:
                 print(f'No match on line {line_number}')
 
-            # name_dict[Username] =  {'Phone_num' : Phone_num  }
-
-    # sorted_running_list = sorted(name_dict.items(), key=lambda x: x[0])
-
 if __name__ == "__main__":
     main()
