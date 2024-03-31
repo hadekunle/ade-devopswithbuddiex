@@ -4,7 +4,7 @@ from sys import argv as argument
 
 system('clear')
 
-regex_1 = r'([0-2]*[0-9]*[0-9]*\.){3}([0-2]*[0-9]*[0-9]*)\s'  # 123.456.789.123
+regex_1 = r'([1-2]*[0-9]*[0-9]*\.){3}([0-2]*[0-9]*[0-9]*)\s'  # 123.456.789.123
 
 valid_ip_pattern = f'{regex_1}'
 

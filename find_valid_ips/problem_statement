@@ -8,7 +8,7 @@ Input: a file with following content
 148.252.55.159
 190.020.99.96
 149.130.0.90
-61.133.193.25a
+161.133.193.25a
  
 Output: valid IPs
  
@@ -16,3 +16,4 @@ Note:
 1) Please usr RE to implement your solution
 2) Leading zeros are not allowed unless the value is 0
 3) the file should give you an idea what to watch out for
+
