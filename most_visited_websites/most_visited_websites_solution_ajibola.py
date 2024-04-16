@@ -23,9 +23,6 @@ def most_visited(file):
     print(output_list)
     return output_list
 
-            
-
-
 
 def main():
     file = sys.argv[1]
