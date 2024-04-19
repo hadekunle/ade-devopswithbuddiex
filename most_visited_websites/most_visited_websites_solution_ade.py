@@ -28,7 +28,7 @@ def main():
     elif len(argument) == 2 :
         log_file = argument[1]
     else:
-        log_file = '/Users/user/Documents/Desktop2/AWS-COURSE/devopswithbuddiex/ade-devopswithbuddiex/most_visited_websites/file'
+        log_file = './most_visited_websites/file'
 
     if not path.exists(log_file):
         raise FileNotFoundError(f"{log_file} does not exist")
