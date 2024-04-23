@@ -1,4 +1,3 @@
-
 from datetime import datetime, timedelta
 from os import path, system
 from pprint import pprint
@@ -33,8 +32,8 @@ def main():
     elif len(argument) == 2 :
         log_file = argument[1]
     else:
-        log_file = '/Users/user/Documents/Desktop2/AWS-COURSE/devopswithbuddiex/ade-devopswithbuddiex/overloaded_servers/log'
-
+        log_file = './overloaded_servers/log'
+     
     if not path.exists(log_file):
         raise FileNotFoundError(f"{log_file} does not exist")
 
