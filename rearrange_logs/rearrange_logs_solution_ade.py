@@ -5,17 +5,12 @@ import pandas as pd
 
 os.system('clear')
 
-'''
-Reminders:
-remind all to check remove_soft_links folder
-overloaded server bobjay soln
-'''
 
 def list_files(directory):
     all_files = []
     for root, dirs, files in os.walk(directory):
         for file in files:
-            if (re.findall(r'\blog\d+\b',str(file))):
+            if (re.findall(r'\blog\d+\b',str(file))): #make fix for any case LOG
                 full_path = os.path.join(root, file)
                 all_files.append(full_path)
     return all_files
@@ -68,10 +63,10 @@ def main():
 
         date_counts.to_csv(f'{directory}/pandas_stats_log', sep=' ', index=False,mode='a',header=True) 
 
-        if os.path.exists(f'{directory}/pandas_add_log'):
-            clean_up_add_log(directory)
-        else:
-            print('No add log file to clean')
+    if os.path.exists(f'{directory}/pandas_add_log'):
+        clean_up_add_log(directory)
+    else:
+        print('No add log file to clean')
 
 if __name__ == "__main__":
     main()
