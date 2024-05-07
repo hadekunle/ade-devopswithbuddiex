@@ -1,9 +1,9 @@
 import os
 
 os.system('clear')
-from pprint import pprint
 
-path = '/Users/user/Documents/Desktop2/AWS-COURSE/devopswithbuddiex/ade-devopswithbuddiex/top_three_words/file'
+directory = os.path.dirname(os.path.abspath(__file__))
+path = f'{directory}/file'
 count_dict = {} #{key,value}
 
 with open(path,'r') as file:
