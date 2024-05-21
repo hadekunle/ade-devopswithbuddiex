@@ -1,9 +1,8 @@
 import pytest
 from find_phone_Obi_solution import extract_valid_us_phone_numbers  
 
-# Here's a modified function for direct input testing
+
 def extract_from_string(input_string):
-    # This is a stand-in for the original function that works with direct string input
     return extract_valid_us_phone_numbers(input_string)
 
 @pytest.mark.parametrize("test_input,expected", [
