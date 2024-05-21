@@ -1,4 +1,5 @@
 import re
+import sys
 from pprint import pprint
 
 def find_valid_ips(file_path):
@@ -37,5 +38,15 @@ def find_valid_ips(file_path):
     return valid_ips
 
 
-valid_ips = find_valid_ips('find_valid_ips/file')
-pprint(valid_ips)
+
+
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python3 script.py log_file")
+        sys.exit(1)
+    
+    file = sys.argv[1]
+    valid_ips = find_valid_ips(file)
+    pprint(valid_ips)
