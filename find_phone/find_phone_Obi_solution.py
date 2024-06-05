@@ -22,5 +22,14 @@ def extract_valid_us_phone_numbers(file_path):
     return valid_numbers
 
 
-valid_numbers = extract_valid_us_phone_numbers('find_phone/file')
-pprint(valid_numbers)
+
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python3 script.py log_file")
+        sys.exit(1)
+    
+    file = sys.argv[1]
+    valid_numbers = extract_valid_us_phone_numbers(file)
+    pprint(valid_numbers)
