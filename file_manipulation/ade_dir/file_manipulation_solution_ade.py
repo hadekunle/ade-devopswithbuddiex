@@ -31,6 +31,7 @@ for each in list_dir_1:
         all_txt.append(each)
 
 combined_txt = "stuff.txt"
-for each in sorted(all_txt):
-    os.system(f'cat {each} >> {combined_txt}')
-os.system(f'mv {combined_txt} {target}')
+all_txt = sorted(all_txt)
+for each in all_txt:
+    if each != 'stuff.txt':
+        os.system(f'cat {curr_dir}/{each} >> {target}/{combined_txt}')
