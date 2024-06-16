@@ -1,12 +1,15 @@
 import os
 import re
-
+from tkinter import filedialog as fd
 import pandas as pd
-
 os.system('clear')
 directory = os.path.dirname(os.path.abspath(__file__))
-# directory = os.getcwd()
 path = f'{directory}/file'
+path = fd.askopenfilename(
+        title='Select a file input',
+        initialdir = directory,
+        initialfile = path,
+        )
 
 def clean_ip(x):
     parts = re.split(r'[-.,\s]+',x)
@@ -22,7 +25,6 @@ for col in range(4):
     new_col = f'col_{col}'
     clean_col.append(new_col)
     df[new_col] = df['clean'].map(lambda x: int(x.split(".")[col]))
-
 
 df = df.sort_values(by=[*clean_col],ascending=True)
 df = df.drop(columns=[0,*clean_col])

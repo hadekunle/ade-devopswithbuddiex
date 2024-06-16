@@ -1,5 +1,6 @@
 import os
 import re
+from tkinter import filedialog as fd
 
 import pyspark.sql.functions as F
 from pyspark.sql import SparkSession
@@ -9,6 +10,10 @@ os.system('clear')
 
 directory = os.path.dirname(os.path.abspath(__file__))
 path = f'{directory}/file'
+path = fd.askopenfilename(title='Select a file input',
+        initialdir = directory,
+        initialfile = path,
+        )
 
 spark = SparkSession.builder.getOrCreate()
 df = spark.read.csv(path, header=False, inferSchema=False,sep='@')
