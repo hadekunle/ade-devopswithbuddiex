@@ -15,3 +15,4 @@ output: a new file with standardized IPs
 2) remove leading zeros (except for the number 0)
 3) separator has to be '.'
 4) sort the IPs from smallest to largest
+5).
