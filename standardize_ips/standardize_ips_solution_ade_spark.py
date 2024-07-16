@@ -1,5 +1,4 @@
 import os
-import re
 from tkinter import filedialog as fd
 
 import pyspark.sql.functions as F

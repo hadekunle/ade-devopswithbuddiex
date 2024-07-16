@@ -1,7 +1,8 @@
 import os
-import re
 from tkinter import filedialog as fd
+
 import pandas as pd
+
 os.system('clear')
 directory = os.path.dirname(os.path.abspath(__file__))
 path = f'{directory}/file'
