@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 **/.DS_Store
 **/test.py
+**/test*.py
 **/addition/**
 **/advanced/**
 advanced/**
