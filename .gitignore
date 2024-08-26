@@ -6,8 +6,8 @@ __pycache__/
 **/test.py
 **/test*.py
 **/addition/**
-**/advanced/**
-advanced/**
+**/_advanced/**
+_advanced/**
 
 # C extensions
 *.so
