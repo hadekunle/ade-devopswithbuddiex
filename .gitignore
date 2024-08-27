@@ -6,8 +6,10 @@ __pycache__/
 **/test.py
 **/test*.py
 **/addition/**
-**/advanced/**
-advanced/**
+**/_advanced/**
+_advanced/**
+find_unsolved_dirs.py
+
 
 # C extensions
 *.so
