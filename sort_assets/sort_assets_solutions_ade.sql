@@ -31,4 +31,4 @@ select asset_no, model, created, assignee from cte;
 
 -- https://sqliteonline.com/
 
--- #TODO : add trigger to resort when new entry is added to table. 
+-- #TODO : add trigger to recalculate when new entry is added to table. 
