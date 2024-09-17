@@ -1,4 +1,5 @@
 import os
+from datetime import datetime, timedelta
 
 import pandas as pd
 
@@ -14,8 +15,9 @@ df = df.drop(columns=['time'])
 df = df.sort_values(by=['PID','timestamp'])
 process = df['PID'].tolist()
 process = sorted(list(set(process)))
+
 for each in process:
-    running_total = df.iloc[1]['timestamp'] - df.iloc[1]['timestamp']
+    running_total = timedelta(0)
     try:
         df_temp = (df[df['PID'] == each])
         if len(df_temp[df_temp['action']=='start']) != 1:
@@ -24,6 +26,8 @@ for each in process:
             continue
         if len(df_temp[df_temp['action']=='pause']) == len(df_temp[df_temp['action']=='resume']) == 0:
             running_total += df_temp.iloc[1]['timestamp']  - df_temp.iloc[0]['timestamp'] 
+            print(f'The runtime for PID {each} is {running_total}')
+            continue
         if len(df_temp[df_temp['action']=='pause']) !=  len(df_temp[df_temp['action']=='resume']):
             continue
 
