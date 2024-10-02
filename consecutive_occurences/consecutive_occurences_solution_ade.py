@@ -2,7 +2,7 @@ import os
 
 os.system('reset')
 
-def top_three(input):
+def top_three(input: str):
     string = input + '-' 
     count, count_list = 1,[]
     for i in range(1,len(string)):
@@ -14,4 +14,4 @@ def top_three(input):
     count_list = sorted(count_list, key=lambda x: x[0], reverse=True )
     return count_list[:3] 
 
-[ print(f'{i[1]},{i[0]}') for i in top_three('aaabbccadddeeee') ]
+[ print(f'{i[1]},{i[0]}') for i in top_three('aaabbccaddde') ]
