@@ -8,6 +8,11 @@ if [ ! -f "$SOURCE_HOOK" ]; then
     exit 1
 fi
 
+if [ -f "$DEST_HOOK" ]; then
+    echo "Error: Custom pre-commit hook already installed."
+    exit 1
+fi
+
 cp "$SOURCE_HOOK" "$DEST_HOOK"
 chmod +x "$DEST_HOOK"
 echo "Pre-commit hook has been successfully installed."
