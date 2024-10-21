@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Define the regex pattern for allowed file names
+FILENAME_PATTERN="^[a-z0-9_]+_solution[0-9]*_[a-z0-9]+\.[a-z]+$"
+
+# Get a list of newly added or modified files that are staged for commit
+FILES=$(git diff --cached --name-only --diff-filter=A)
+
+# Loop through each file to check its name
+for FILE in $FILES; do
+    BASENAME=$(basename "$FILE")
+    if [[ ! $BASENAME =~ $FILENAME_PATTERN ]]; then
+        echo "Error: The file '$BASENAME' does not follow the naming convention."
+        echo -e "Please ensure the filename is all lowercase and follows the pattern:\n<problem_name>_solution_<first_name>.<ext>"
+	echo "Example --> ordered_list_solution_ade.py"
+        exit 1
+    fi
+done
+
+# If all files match the pattern, allow the commit
+exit 0
+
