@@ -11,7 +11,7 @@ def top_three(input):
         else:
             count_list.append((count, string[i-1]))
             count = 1
-    count_list = sorted(count_list, key=lambda x: x[0], reverse=True )
+    count_list =  sorted(count_list, key=lambda x: x[0], reverse=True )
     return count_list[:3] 
 
 [ print(f'{i[1]},{i[0]}') for i in top_three('aaabbccadddeeee') ]
