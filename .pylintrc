@@ -1,0 +1,2 @@
+[MESSAGES CONTROL]
+disable = C,R,W,E,F  # Disable conventions, refactor suggestions, and warnings
