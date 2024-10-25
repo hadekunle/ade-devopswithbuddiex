@@ -1,13 +1,8 @@
 [MESSAGES CONTROL]
-disable = C,R,W,E,F  # Disable conventions, refactor suggestions, and warnings
-
+disable = C,R,W,E,F, C0111, W0611, R0201
 
 ; (C) Convention: Coding standard issues that indicate non-adherence to recommended coding style.
 ; (R) Refactor: Suggestions for code that could be refactored to be cleaner or more efficient.
 ; (W) Warning: Issues that could cause problems but might not prevent the code from running.
 ; (E) Error: Errors that will likely prevent the code from running.
 ; (F) Fatal: Severe issues that prevent pylint from analyzing the file further.
-
-
-; for specific codes to disable
-; pylint --disable=C0111 <file_or_module>
