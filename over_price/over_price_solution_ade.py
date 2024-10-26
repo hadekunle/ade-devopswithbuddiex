@@ -1,5 +1,6 @@
 import os
 import sys
+
 os.system('clear')
 
 def over_price(input_file):

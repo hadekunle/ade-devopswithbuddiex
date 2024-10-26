@@ -1,5 +1,5 @@
 [MESSAGES CONTROL]
-disable = C,R,W
+disable = C,R
 
 ; (C) Convention: Coding standard issues that indicate non-adherence to recommended coding style.
 ; (R) Refactor: Suggestions for code that could be refactored to be cleaner or more efficient.
