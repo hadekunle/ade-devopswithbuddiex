@@ -1,4 +1,4 @@
-name: Pylint
+name: Pylint workflow
 run-name: Pylinter run by ${{ github.actor }} 🚀
 on: [push]
 jobs:
