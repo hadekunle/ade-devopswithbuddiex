@@ -16,18 +16,18 @@
 # left_lists(a, b) # [1, 3]
 
 
-def xor_lists(a,b):
+def xor_lists(z,y):
     result = z ^ y
     print(result)
     return result
 
 
-def and_lists(a,b):
+def and_lists(z,y):
     result = z & y
     print(result)
     return result
 
-def left_lists(a,b):
+def left_lists(z,y):
     result = z - y
     print(result)
     return result

@@ -1,6 +1,6 @@
-boto3==1.26.52
-mysql-connector-python==8.3.0
 pandas==2.1.0
 pylint
 pyspark
 pytest==7.4.1
+sys
+re

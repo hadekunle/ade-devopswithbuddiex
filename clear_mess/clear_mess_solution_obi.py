@@ -36,14 +36,14 @@ def process_and_sort_contacts(file, f):
 
 if __name__ == "__main__":
     debug = True
-    # if len(sys.argv) != 2:
-    #     print("We the the messy file")
-    #     sys.exit(1)
-    # else:
-    #     file = sys.argv[1]
-    #     cwd = os.getcwd()
-    #     path_b = cwd + "result.txt"
-    #     print(cwd)
+    if len(sys.argv) != 2:
+        print("We the messy file")
+        sys.exit(1)
+    else:
+        file = sys.argv[1]
+        cwd = os.getcwd()
+        path_b = cwd + "result.txt"
+        print(cwd)
     process_and_sort_contacts(file, path_b)
   
     

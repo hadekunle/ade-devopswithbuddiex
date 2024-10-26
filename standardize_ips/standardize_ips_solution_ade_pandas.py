@@ -1,6 +1,6 @@
 import os
 from tkinter import filedialog as fd
-
+import re
 import pandas as pd
 
 os.system('clear')
