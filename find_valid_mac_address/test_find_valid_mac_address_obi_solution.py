@@ -1,5 +1,5 @@
 import pytest
-from your_script_name import find_valid_mac_addresses  # Adjust 'your_script_name' to the name of your Python script file
+from find_valid_mac_address_obi_solution import find_valid_mac_addresses
 
 # Mock data for testing
 VALID_MAC_DATA = """
