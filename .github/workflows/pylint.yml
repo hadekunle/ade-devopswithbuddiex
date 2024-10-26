@@ -1,5 +1,5 @@
 name: Pylint workflow
-run-name: Pylinter run by ${{ github.actor }} 🚀
+# run-name: Pylinter run by ${{ github.actor }} 🚀
 on: [push]
 jobs:
   lint:
