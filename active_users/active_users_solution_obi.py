@@ -1,4 +1,5 @@
 import os
+
 default_number = "444-123-1233"
 
 
@@ -43,7 +44,7 @@ def isactive(activeA, activeB):
 def checkIffilesexist():
     try:
         arr = os.listdir("active_users")
-        
+        fir,t = '',''
         for n in arr:
             if "file" in n:
                 print(n)
@@ -55,7 +56,6 @@ def checkIffilesexist():
                 search_word2 = "Username"
                 if search_word in f:
                     fir = currentdir
-                    
                 if search_word2 in f:
                     t =currentdir 
         filea = readfiles(fir)
@@ -68,16 +68,10 @@ def checkIffilesexist():
     except FileNotFoundError:
         print("Doesn't exist")
 
-         
-
 
 def main():
     print("welcome")
     checkIffilesexist()
    
-
-    
-
-
 if __name__ == "__main__":
     main()
