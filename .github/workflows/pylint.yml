@@ -1,5 +1,5 @@
 name: Pylint
-
+run-name: Pylinter run by ${{ github.actor }} 🚀
 on: [push]
 
 jobs:
