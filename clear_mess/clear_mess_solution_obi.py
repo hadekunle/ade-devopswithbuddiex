@@ -44,7 +44,7 @@ if __name__ == "__main__":
     #     cwd = os.getcwd()
     #     path_b = cwd + "result.txt"
     #     print(cwd)
-        process_and_sort_contacts(file, path_b)
+    process_and_sort_contacts(file, path_b)
   
     
         
