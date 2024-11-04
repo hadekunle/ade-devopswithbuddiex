@@ -48,6 +48,7 @@ run-name: Terraform apply run by ${{ github.actor }} 🚀 #set to commit message
 on:
   push:
     paths:
+      - "**"
       - "!**/README.md"
   schedule:
     - cron: "48 4 * * *"
