@@ -43,6 +43,7 @@
 #         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
 name: "Terraform"
+run-name: Terraform apply run by ${{ github.actor }} 🚀 #set to commit message if omitted
 
 on:
   push:
