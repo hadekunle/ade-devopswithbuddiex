@@ -50,7 +50,7 @@ on:
     paths:
       - "!**/README.md"
   schedule:
-    - cron: "00 13 * * *"
+    - cron: "44 4 * * *"
 
 permissions:
   contents: read
