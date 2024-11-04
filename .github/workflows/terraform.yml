@@ -46,9 +46,9 @@ name: "Terraform"
 run-name: Terraform apply run by ${{ github.actor }} 🚀 #set to commit message if omitted
 
 on:
-  # push:
-  #   paths:
-  #     - "!**/README.md"
+  push:
+    paths:
+      - "!**/README.md"
   schedule:
     - cron: "48 4 * * *"
 
