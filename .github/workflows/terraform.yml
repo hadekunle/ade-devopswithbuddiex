@@ -51,7 +51,7 @@ on:
       - "**.py"
       - "**.txt"
       - "**"
-      - "!**/readme.md"
+      - "!**/README.md"
   schedule:
     - cron: "00 13 * * *"
 
