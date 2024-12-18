@@ -9,7 +9,7 @@ unique = []
 with open(path,'r') as file:
     for line in file:
         line = line.strip()
-        if line not in unique or line='':
+        if line not in unique or line=='':
             unique.append(line)
 
 with open(path2,'w') as file:
