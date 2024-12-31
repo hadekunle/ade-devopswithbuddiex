@@ -1,0 +1,45 @@
+You are developing a simple version control system. Your system can support branches, and you can switch between branches or update the files in a branch using the following actions:
+* switch <branch name> – switches to the branch with given name.
+* push <file name> – pushes a file to the current branch. Note, that if the file was pushed to the current branch before, then the number of files should not be changed.
+Your task is to process all the logs and return the branch name that contains the largest number of files at the end. It is guaranteed that there is no tie.
+Notes:
+* It is guaranteed that the first command is switch.
+* It is guaranteed that there is at least one push command.
+Also note that you are not expected to provide the most optimal solution, but a solution with time complexity not worse than O(logs.length2) will fit within the execution time limit.
+Example
+* Forlogs = [
+*   "switch branch1",
+*   "push file1",
+*   "push file2",
+*   "push file1",
+*   "switch branch2",
+*   "switch issue2",
+*   "push file1",
+*   "push file2",
+*   "push file3"
+* ]
+* the output should be solution(logs) = "issue2".Explanation:
+    * Command 0: switch branch1 changes the current branch to branch1
+    * Commands 1, 2: The next two logs push file1 and file2 files, so branch1 contains 2 files
+    * Command 3: Pushing file1 in branch1 doesn't change the content of the branch, as this file already exists there
+    * Command 4: switch branch2 switches the current branch to branch2
+    * Command 5: switch issue2 switches the current branch to issue2
+    * Commands 6, 7, 8: The last three logs push file1, file2, and file3 to the issue2 branch, so issue2 contains 3 files
+* After all logs have been processed, here is the state of all the branches:
+    * branch1 contains files file1 and file2
+    * branch2 is empty
+    * issue2 contains files file1, file2, and file3
+* As you can see, the branch with the largest number of files is issue2.
+* Forlogs = [
+*   "switch dockerUpdate",
+*   "push mainFile",
+*   "switch myissue2",
+*   "push configFile",
+*   "push configFile",
+*   "switch dockerUpdate",
+*   "push configFile"
+* ]
+* the output should be solution(logs) = "dockerUpdate".Explanation:After all logs have been processed, here is the state of the filesystem:
+    * branch dockerUpdate contains files mainFile and configFile
+    * branch myissue2 contains a single file configFile
+* Thus, the branch with the largest number of files is dockerUpdate.

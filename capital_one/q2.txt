@@ -1,0 +1,21 @@
+Your task is to implement a simplified inventory tracking system for a large retail store.
+You are given a transaction log, where each log item corresponds to one of three transaction types: supply, sell, or return. Log items are provided in the following format:
+* ["supply", "<item name>", "<count>", "<price>"] - the store receives <count> units of <item name>, and each item costs <price>.
+* ["sell", "<item name>", "<count>"] - the store sells <count> units of <item name>. If the specified item is available at different prices, the cheapest ones should be sold first. It is guaranteed that the store will always have enough items to satisfy all sell transactions.
+* ["return", "<item name>", "<count>", "<sell price>", "<new price>"] - the store takes back <count> units of <item name>. It is guaranteed that the store has sold at least <count> units of <item name> previously at price = <sell price>, which were not returned yet. The returned items can be added back to inventory and sold later at price = <new price>.
+The tracking system should return the revenue from all sell transactions after processing the entire transaction log. Specifically, return an array representing the amount of money the store received from each sell transaction.
+Note: You are not expected to provide the most optimal solution, but a solution with time complexity not worse than O(logs.length2) will fit within the execution time limit.
+Example
+For
+logs = [
+  ["supply", "item1", "2", "100"],
+  ["supply", "item2", "3", "60"],
+  ["sell", "item1", "1"],
+  ["sell", "item1", "1"],
+  ["sell", "item2", "2"],
+  ["return", "item2", "1", "60", "40"],
+  ["sell", "item2", "1"],
+  ["sell", "item2", "1"]
+]
+the output should be
+solution(logs) = [100, 100, 120, 40, 60]
